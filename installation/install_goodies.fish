@@ -1,6 +1,8 @@
 function install_goodies
-    sudo pacman -S yay          # AUR Helper
-    sudo pacman -S ptyxis       # GNOME Terminal
-    sudo pacman -S localsend    # AirDrop for Linux <-> Android
-    sudo pacman -S flatseal     # For managing flatpak's permissions.
+    sudo pacman -S flatpak
+    sudo pacman -S yay
+    sudo pacman -S ptyxis
+    sudo pacman -S localsend
+    sudo pacman -S flatseal
+    sudo pacman -S visual-studio-code-bin
 end
