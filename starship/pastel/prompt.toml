@@ -50,7 +50,7 @@ truncation_symbol = "…/"
 
 [cpp]
 symbol = " "
-style = "bg:#sky"
+style = "bg:sky"
 format = "[ $symbol ($version) ]($style)"
 disabled = false
 
