@@ -11,7 +11,6 @@ $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_blue)\
 $cpp\
-$rust\
 $python\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
@@ -77,25 +76,24 @@ format = "[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)"
 symbol = " "
 style = "bg:color_blue"
 format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)"
-
-[rust]
-symbol = ""
-style = "bg:color_blue"
-format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)"
+disabled = false
 
 [python]
 symbol = ""
 style = "bg:color_blue"
 format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)"
+disabled = false
 
 [docker_context]
 symbol = ""
 style = "bg:color_bg3"
 format = "[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)"
+disabled = false
 
 [conda]
 style = "bg:color_bg3"
 format = "[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)"
+disabled = false
 
 [time]
 disabled = false

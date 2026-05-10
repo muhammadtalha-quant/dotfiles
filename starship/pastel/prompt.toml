@@ -11,7 +11,6 @@ $git_branch\
 $git_status\
 [](fg:salmon bg:sky)\
 $cpp\
-$rust\
 [](fg:sky bg:coral_coast)\
 $docker_context\
 [](fg:coral_coast bg:teal_blue)\
@@ -53,11 +52,13 @@ truncation_symbol = "…/"
 symbol = " "
 style = "bg:#sky"
 format = "[ $symbol ($version) ]($style)"
+disabled = false
 
 [docker_context]
 symbol = " "
 style = "bg:coral_coast"
 format = "[ $symbol $context ]($style)"
+disabled = false
 
 [git_branch]
 symbol = ""
@@ -67,11 +68,6 @@ format = "[ $symbol $branch ]($style)"
 [git_status]
 style = "fg:plum bg:salmon"
 format = "[$all_status$ahead_behind ]($style)"
-
-[rust]
-symbol = ""
-style = "bg:sky"
-format = "[ $symbol ($version) ]($style)"
 
 [time]
 disabled = false

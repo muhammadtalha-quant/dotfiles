@@ -11,7 +11,6 @@ $git_branch\
 $git_status\
 [](fg:yellow bg:green)\
 $cpp\
-$rust\
 $python\
 [](fg:green bg:sapphire)\
 $conda\
@@ -66,27 +65,27 @@ format = "[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)"
 symbol = " "
 style = "bg:green"
 format = "[[ $symbol( $version) ](fg:crust bg:green)]($style)"
+disabled = false
 
-[rust]
-symbol = ""
-style = "bg:green"
-format = "[[ $symbol( $version) ](fg:crust bg:green)]($style)"
 
 [python]
 symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+disabled = false
 
 [docker_context]
 symbol = ""
 style = "bg:sapphire"
 format = "[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)"
+disabled = false
 
 [conda]
 symbol = "  "
 style = "fg:crust bg:sapphire"
 format = "[$symbol$environment ]($style)"
 ignore_base = false
+disabled = false
 
 [time]
 disabled = false
