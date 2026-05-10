@@ -423,7 +423,6 @@
         "cmake",
         "fakeroot",
         "gcc",
-        "code",
         "fzf",
         "unzip",
         "zip",
@@ -441,7 +440,9 @@
         "ttf-jetbrains-mono",
         "ttf-jetbrains-mono-nerd",
         "typst",
-        "dconf"
+        "dconf",
+        "7zip",
+        "unrar"
     ],
     "pacman_config": {
         "color": true,
