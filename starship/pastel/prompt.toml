@@ -41,16 +41,12 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-"coding" = "󰲋 "
-"code" = "󰲋 "
-"development" = "󰲋 "
+"Projects" = " "
 
 [cpp]
 symbol = " "
@@ -78,7 +74,7 @@ format = "[ $symbol ($version) ]($style)"
 
 [time]
 disabled = false
-time_format = "%R"  # Hour:Minute Format
+time_format = "%R"             # Hour:Minute Format
 style = "bg:teal_blue"
 format = "[  $time ]($style)"
 
