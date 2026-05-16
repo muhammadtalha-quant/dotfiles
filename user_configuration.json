@@ -450,13 +450,15 @@
     },
     "profile_config": {
         "gfx_driver": "All open-source",
-        "greeter": "gdm",
+        "greeter": "sddm",
         "profile": {
             "custom_settings": {
-                "GNOME": {}
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
             },
             "details": [
-                "GNOME"
+                "Hyprland"
             ],
             "main": "Desktop"
         }
