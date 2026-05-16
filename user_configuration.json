@@ -21,7 +21,7 @@
         "uki": false
     },
     "custom_commands": [],
-    "hostname": "quantarch",
+    "hostname": "koolarch",
     "kernels": [
         "linux-zen"
     ],
