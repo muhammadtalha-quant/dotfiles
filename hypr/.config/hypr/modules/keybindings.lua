@@ -220,6 +220,65 @@ hl.bind( -- toggle fullscreen
     hl.dsp.window.fullscreen()
 )
 
+hl.bind( -- drag window
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MOUSE.LMB
+    ),
+    hl.dsp.window.drag()
+)
+
+hl.bind( -- resize window
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MOUSE.RMB
+    ),
+    hl.dsp.window.resize()
+)
+
+hl.bind( -- swap focused window with window to the left 
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MODIFIER.SHIFT,
+        KEYS.ARROW.LEFT
+    ),
+    hl.dsp.window.swap({
+        direction = "left"
+    })
+)
+
+hl.bind( -- swap focused window with window to the right
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MODIFIER.SHIFT,
+        KEYS.ARROW.RIGHT
+    ),
+    hl.dsp.window.swap({
+        direction = "right"
+    })
+)
+
+hl.bind( -- swap focused window with window above
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MODIFIER.SHIFT,
+        KEYS.ARROW.UP
+    ),
+    hl.dsp.window.swap({
+        direction = "up"
+    })
+)
+
+hl.bind( -- swap focused window with window below
+    chord(
+        KEYS.MODIFIER.SUPER,
+        KEYS.MODIFIER.SHIFT,
+        KEYS.ARROW.DOWN
+    ),
+    hl.dsp.window.swap({
+        direction = "down"
+    })
+)
 
 -------------------------------------------------------------
 ---                WORKING WITH WORKSPACES                ---   
