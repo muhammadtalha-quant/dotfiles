@@ -216,7 +216,7 @@ hl.bind( -- focus down
 )
 
 hl.bind( -- toggle fullscreen
-    chord(KEYS.FUNCTION.F11),
+    KEYS.FUNCTION.F11,
     hl.dsp.window.fullscreen()
 )
 
