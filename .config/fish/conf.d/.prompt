@@ -1,7 +1,0 @@
-# more than two uncommented line will cause prompt pollution
-# enable new one by removing '#' symbol, disable the old by putting the '#' infront of it
-# PROMPT catppuccin_mocha
-# PROMPT catppuccin_frappe
- PROMPT pastel
-# PROMPT gruvbox
-# PROMPT catppuccin_latte
