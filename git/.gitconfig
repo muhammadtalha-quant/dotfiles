@@ -1,7 +1,7 @@
 [user]
 	name = Muhammad Talha
 	email = muhammadtalha.quant@gmail.com
-	signingkey = PUBLIC_KEY_ID
+	signingkey = 0xDCD524F396068648
 	useConfigOnly = true
 [init]
 	defaultBranch = main
