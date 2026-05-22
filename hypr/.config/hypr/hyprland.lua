@@ -1,4 +1,6 @@
-function start_shell()
+require("modules.keybindings")
+
+local function start_shell()
 	hl.exec_cmd("qs -c noctalia-shell")
 end
 
