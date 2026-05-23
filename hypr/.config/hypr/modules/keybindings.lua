@@ -47,18 +47,18 @@ local  KEYS = {
         UP = "UP",
         DOWN = "DOWN",
     },
-    NUMBER = {
-        ONE = "1",
-        TWO = "2",
-        THREE = "3",
-        FOUR = "4",
-        FIVE = "5",
-        SIX = "6",
-        SEVEN = "7",
-        EIGHT = "8",
-        NINE = "9",
-        ZERO = "0",
-    },
+    -- NUMBER = {
+    --     ONE = "1",
+    --     TWO = "2",
+    --     THREE = "3",
+    --     FOUR = "4",
+    --     FIVE = "5",
+    --     SIX = "6",
+    --     SEVEN = "7",
+    --     EIGHT = "8",
+    --     NINE = "9",
+    --     ZERO = "0",
+    -- },
     PUNCTUATION = {
         COMMA = "COMMA",
         PERIOD = "PERIOD",
@@ -78,7 +78,8 @@ local  KEYS = {
         BACKSPACE  = "BACKSPACE",
         ENTER = "RETURN",
         SPACE = "SPACE",
-        TAB = "TAB"
+        TAB = "TAB",
+        ESCAPE = "ESCAPE"
     },
     NAVIGATION = {
         INSERT = "INSERT",
@@ -103,18 +104,19 @@ local  KEYS = {
         F12 = "F12",
     },
     XF86 = {
-        HOMEPAGE = "XF86HomePage",
-        MAIL = "XF86Mail",            
-        SEARCH = "XF86Search",        
-        TOOLS = "XF86Tools",        
-        AUDIOPLAY = "XF86AudioPlay",        
-        AUDIOPREV = "XF86AudioPrev",        
-        AUDIONEXT = "XF86AudioNext",        
-        AUDIOLOWERVOLUME = "XF86AudioLowerVolume",        
-        AUDIORAISEVOLUME = "XF86AudioRaiseVolume",        
-        AUDIOMUTE = "XF86AudioMute",        
-        EXPLORER = "XF86Explorer",        
-        CALCULATOR = "XF86Calculator"        
+        -- Update according to your keyboard; use wev to find sym
+        HOMEPAGE = "XF86HomePage",                               -- Fn + F1   
+        MAIL = "XF86Mail",                                       -- Fn + F2     
+        SEARCH = "XF86Search",                                   -- Fn + F3 
+        TOOLS = "XF86Tools",                                     -- Fn + F4   
+        AUDIOPLAY = "XF86AudioPlay",                             -- Fn + F5   
+        AUDIOPREV = "XF86AudioPrev",                             -- Fn + F6       
+        AUDIONEXT = "XF86AudioNext",                             -- Fn + F7       
+        AUDIOLOWERVOLUME = "XF86AudioLowerVolume",               -- Fn + F8               
+        AUDIORAISEVOLUME = "XF86AudioRaiseVolume",               -- Fn + F9               
+        AUDIOMUTE = "XF86AudioMute",                             -- Fn + F10           
+        EXPLORER = "XF86Explorer",                               -- Fn + F11           
+        CALCULATOR = "XF86Calculator"                            -- Fn + F12           
     },
     MOUSE = {
         LMB = "mouse:272",
@@ -132,20 +134,59 @@ local  KEYS = {
 
 
 local apps = {
-    ghostty = chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER),
-    ["google-chrome-stable"] = chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B),
-    code = chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C),
-    dolphin = chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E),
-    localsend = chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L),
-    gimp = chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)
+    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = "ghostty",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)] = "google-chrome-stable",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)] = "code",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)] = "dolphin",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)] = "localsend",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)] = "gimp"
 }
 
-for command,keybind in pairs(apps) do 
+for keybind,app in pairs(apps) do 
+     hl.bind(
+        keybind,
+        hl.dsp.exec_cmd(app)
+     )
+end
+
+-----------------------------------------------------------
+---                 NOCTALIA IPC CALLS (v4)             ---
+-----------------------------------------------------------
+--- will change on noctalia v5 release 
+
+local ipc = "qs -c noctalia-shell "
+
+local calls = {
+    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.SPACE)] = "ipc call launcher toggle",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.SPECIAL.SPACE)] = "ipc call controlCenter toggle",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.PERIOD)] = "ipc call settings toggle",
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.V)] = "ipc call launcher clipboard",
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.N)] = "ipc call notifications toggleHistory",
+    [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.ALPHABET.N)] = "ipc call notifications clear",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.N)] = "ipc call notifications toggleDND",
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.B)] = "ipc call bar toggle",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.T)] = "ipc call darkMode toggle",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.COMMA)] = "ipc call launcher emoji",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.C)] = "ipc call calendar toggle",
+    [KEYS.XF86.AUDIORAISEVOLUME] = "ipc call volume increase",
+    [KEYS.XF86.AUDIOLOWERVOLUME] = "ipc call volume decrease",
+    [KEYS.XF86.AUDIOMUTE] = "ipc call volume muteOutput",
+    [KEYS.XF86.CALCULATOR] = "ipc call volume togglePanel",
+    [KEYS.XF86.AUDIOPLAY] = "ipc call media playPause",
+    [chord(KEYS.MODIFIER.ALT, KEYS.SPECIAL.ESCAPE)] = "ipc call systemMonitor toggle",
+    [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.NAVIGATION.DELETE)] = "ipc call sessionMenu toggle",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.L)] = "ipc call lockScreen lock",
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.W)] = "ipc call wallpaper random",
+}
+
+for keybind,call in pairs(calls) do 
     hl.bind(
         keybind,
-        hl.dsp.exec_cmd(command)
+        hl.dsp.exec_cmd(ipc .. call)
     )
 end
+
+
 
 -------------------------------------------------------------
 ---                 WORKING WITH WINDOWS                  ---   
@@ -284,38 +325,51 @@ hl.bind( -- swap focused window with window below
 -------------------------------------------------------------
 ---                WORKING WITH WORKSPACES                ---   
 -------------------------------------------------------------
+---
 
-for i = 1, 9 do
+local function SwitchToWorkspace(WorkspaceID) 
     hl.bind(
         chord(
             KEYS.MODIFIER.SUPER,
-            tostring(i)
+            tostring(WorkspaceID)
         ),
         hl.dsp.focus({
-            workspace = tostring(i)
+            workspace = tostring(WorkspaceID)
         })
     )
+end
+
+local function MoveWindowToWorkspace(WorkspaceID)
      hl.bind(
-        chord(
-            KEYS.MODIFIER.SUPER,
-            KEYS.MODIFIER.SHIFT,
-            tostring(i)
-        ),
+            chord(
+                KEYS.MODIFIER.SUPER,
+                KEYS.MODIFIER.SHIFT,
+                tostring(WorkspaceID)
+            ),
         hl.dsp.window.move({
-            workspace = tostring(i)
+            workspace = tostring(WorkspaceID)
         })
     )
+end
+
+local function MoveWindowToWorkspaceSilently(WorkspaceID) 
     hl.bind(
         chord(
             KEYS.MODIFIER.SUPER,
             KEYS.MODIFIER.ALT,
-            tostring(i)
+            tostring(WorkspaceID)
         ),
         hl.dsp.window.move({
-            workspace = tostring(i),
+            workspace = tostring(WorkspaceID),
             follow = false,
         })
     )
+end
+
+for i = 1, 9 do
+    SwitchToWorkspace(i)
+    MoveWindowToWorkspace(i)
+    MoveWindowToWorkspaceSilently(i)
 end
 
 hl.bind(
