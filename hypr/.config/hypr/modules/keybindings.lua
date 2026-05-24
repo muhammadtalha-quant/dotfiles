@@ -67,7 +67,8 @@ local  KEYS = {
         ENTER = "RETURN",
         SPACE = "SPACE",
         TAB = "TAB",
-        ESCAPE = "ESCAPE"
+        ESCAPE = "ESCAPE",
+        PRINT = "PRINT"
     },
     NAVIGATION = {
         INSERT = "INSERT",
@@ -154,6 +155,7 @@ local calls = {
     [KEYS.XF86.AUDIOLOWERVOLUME] =                                           {name = "ipc call volume decrease",                                description = "Decrease Volume"},
     [KEYS.XF86.AUDIOMUTE] =                                                  {name = "ipc call volume muteOutput",                              description = "Toggle Mute"},
     [chord(KEYS.MODIFIER.ALT, KEYS.SPECIAL.ESCAPE)] =                        {name = "ipc call systemMonitor toggle",                           description = "Toggle Resource Monitor"},
+    [KEYS.SPECIAL.PRINT] =                                                   {name = "ipc call plugin:screen-toolkit toggle",                   description = "Toggle Screen Toolki"},
     [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.NAVIGATION.DELETE)] = {name = "ipc call sessionMenu toggle",                             description = "Toggle Session Menu"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.L)] =       {name = "ipc call lockScreen lock",                                description = "Lock Session"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.W)] =     {name = "ipc call wallpaper random",                               description = "Change Wallpaper"},
