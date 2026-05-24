@@ -114,12 +114,7 @@ local  KEYS = {
 }
 
 
-
-
------------------------------------------------------------
----                       APPS                          ---
------------------------------------------------------------
-
+-- 1. Apps
 
 local apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {name = "ghostty",               description = "Open Ghostty Terminal"},
@@ -130,22 +125,18 @@ local apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)] =    {name = "gimp",                  description = "Open GIMP"},
 }
 
+
 for keybind,app in pairs(apps) do 
      hl.bind(
         keybind,
         hl.dsp.exec_cmd(app.name),
         {
             description = app.description,
-            submap_universal = true,
-            submap = "Apps"
         }
      )
 end
 
------------------------------------------------------------
----                 NOCTALIA IPC CALLS (v4)             ---
------------------------------------------------------------
---- will change on noctalia v5 release 
+-- 2. IPC Calls
 
 local ipc = "qs -c noctalia-shell "
 
@@ -169,6 +160,7 @@ local calls = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.FUNCTION.F1)] =                         {name = "ipc call plugin:keybind-cheatsheet toggle",               description = "Toggle Keybinds"},                           
 }
 
+
 for keybind,call in pairs(calls) do 
     hl.bind(
         keybind,
@@ -180,11 +172,7 @@ for keybind,call in pairs(calls) do
 end
 
 
-
--------------------------------------------------------------
----                 WORKING WITH WINDOWS                  ---   
--------------------------------------------------------------
-
+-- 3. Windows 
 
 hl.bind(
     chord(
@@ -361,6 +349,8 @@ hl.bind(
 ---                WORKING WITH WORKSPACES                ---   
 -------------------------------------------------------------
 ---
+
+-- 4. Workspaces
 
 local function SwitchToWorkspace(WorkspaceID) 
     hl.bind(
