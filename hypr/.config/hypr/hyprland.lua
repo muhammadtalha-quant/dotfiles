@@ -1,4 +1,5 @@
 require("modules.keybindings")
+require("modules.monitors")
 
 local function start_shell()
 	hl.exec_cmd("qs -c noctalia-shell") -- to be removed when noctalia v5 releases
