@@ -1,0 +1,456 @@
+{
+  "cheatsheetData": [
+    {
+      "title": "Apps",
+      "binds": [
+        {
+          "keys": "Super + B",
+          "desc": "Open Google Chrome Browser",
+          "bindId": "|64|B|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + C",
+          "desc": "Open VSCode",
+          "bindId": "|64|C|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + RETURN",
+          "desc": "Open Ghostty Terminal",
+          "bindId": "|64|RETURN|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + G",
+          "desc": "Open GIMP",
+          "bindId": "|64|G|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + L",
+          "desc": "Open Localsend",
+          "bindId": "|64|L|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + E",
+          "desc": "Open Dolphin File Manager",
+          "bindId": "|64|E|000|__lua",
+          "undescribed": false
+        }
+      ]
+    },
+    {
+      "title": "IPC Calls",
+      "binds": [
+        {
+          "keys": "Super + PERIOD",
+          "desc": "Toggle Settings",
+          "bindId": "|64|PERIOD|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Vol Up",
+          "desc": "Increase Volume",
+          "bindId": "|0|XF86AudioRaiseVolume|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "Decrease Volume",
+          "bindId": "|0|XF86AudioLowerVolume|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + SPACE",
+          "desc": "Toogle Sidebar",
+          "bindId": "|72|SPACE|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Alt + N",
+          "desc": "Toggle Notifications",
+          "bindId": "|8|N|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Alt + C",
+          "desc": "Toggle Calendar",
+          "bindId": "|8|C|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + W",
+          "desc": "Change Wallpaper",
+          "bindId": "|65|W|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Ctrl + Alt + DELETE",
+          "desc": "Toggle Session Menu",
+          "bindId": "|12|DELETE|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Alt + ESCAPE",
+          "desc": "Toggle Resource Monitor",
+          "bindId": "|8|ESCAPE|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + T",
+          "desc": "Cycle Dark/Light Theme",
+          "bindId": "|65|T|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + SPACE",
+          "desc": "Toggle Launcher",
+          "bindId": "|64|SPACE|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + F1",
+          "desc": "Toggle Keybinds",
+          "bindId": "|64|F1|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + L",
+          "desc": "Lock Session",
+          "bindId": "|72|L|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Alt + B",
+          "desc": "Toggle Bar",
+          "bindId": "|8|B|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + COMMA",
+          "desc": "Toggle Emoji Selector",
+          "bindId": "|64|COMMA|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Alt + V",
+          "desc": "Toggle Clipboard History",
+          "bindId": "|8|V|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Mute",
+          "desc": "Toggle Mute",
+          "bindId": "|0|XF86AudioMute|000|__lua",
+          "undescribed": false
+        }
+      ]
+    },
+    {
+      "title": "Windows",
+      "binds": [
+        {
+          "keys": "Super + Q",
+          "desc": "Gracefully Close Window",
+          "bindId": "|64|Q|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + Q",
+          "desc": "Forcefully Close Window",
+          "bindId": "|65|Q|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + F",
+          "desc": "Toggle Float/Tile",
+          "bindId": "|64|F|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + LEFT",
+          "desc": "Focus Window Left",
+          "bindId": "|64|LEFT|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + RIGHT",
+          "desc": "Focus Window Right",
+          "bindId": "|64|RIGHT|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + UP",
+          "desc": "Focus Window Up",
+          "bindId": "|64|UP|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + DOWN",
+          "desc": "Focus Window Down",
+          "bindId": "|64|DOWN|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "F11",
+          "desc": "Toggle Fullscreen",
+          "bindId": "|0|F11|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Left Click",
+          "desc": "Drag Window",
+          "bindId": "|64|mouse:272|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Right Click",
+          "desc": "Resize Window",
+          "bindId": "|64|mouse:273|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + LEFT",
+          "desc": "Swap Focused Window with Window to Left",
+          "bindId": "|65|LEFT|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + RIGHT",
+          "desc": "Swap Focused Window with Window to Right",
+          "bindId": "|65|RIGHT|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + UP",
+          "desc": "Swap Focused Window with Window Above",
+          "bindId": "|65|UP|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + DOWN",
+          "desc": "Swap Focused Window with Window Below",
+          "bindId": "|65|DOWN|000|__lua",
+          "undescribed": false
+        }
+      ]
+    },
+    {
+      "title": "Workspaces",
+      "binds": [
+        {
+          "keys": "Super + 1",
+          "desc": "Switch To Workspace # 1",
+          "bindId": "|64|1|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 2",
+          "desc": "Switch To Workspace # 2",
+          "bindId": "|64|2|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 3",
+          "desc": "Switch To Workspace # 3",
+          "bindId": "|64|3|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 4",
+          "desc": "Switch To Workspace # 4",
+          "bindId": "|64|4|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 5",
+          "desc": "Switch To Workspace # 5",
+          "bindId": "|64|5|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 6",
+          "desc": "Switch To Workspace # 6",
+          "bindId": "|64|6|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 7",
+          "desc": "Switch To Workspace # 7",
+          "bindId": "|64|7|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 8",
+          "desc": "Switch To Workspace # 8",
+          "bindId": "|64|8|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + 9",
+          "desc": "Switch To Workspace # 9",
+          "bindId": "|64|9|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 1",
+          "desc": "Move Window To Workspace # 1",
+          "bindId": "|65|1|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 2",
+          "desc": "Move Window To Workspace # 2",
+          "bindId": "|65|2|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 3",
+          "desc": "Move Window To Workspace # 3",
+          "bindId": "|65|3|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 4",
+          "desc": "Move Window To Workspace # 4",
+          "bindId": "|65|4|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 5",
+          "desc": "Move Window To Workspace # 5",
+          "bindId": "|65|5|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 6",
+          "desc": "Move Window To Workspace # 6",
+          "bindId": "|65|6|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 7",
+          "desc": "Move Window To Workspace # 7",
+          "bindId": "|65|7|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 8",
+          "desc": "Move Window To Workspace # 8",
+          "bindId": "|65|8|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Shift + 9",
+          "desc": "Move Window To Workspace # 9",
+          "bindId": "|65|9|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 1",
+          "desc": "Move Window (Silent) To Workspace # 1",
+          "bindId": "|72|1|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 2",
+          "desc": "Move Window (Silent) To Workspace # 2",
+          "bindId": "|72|2|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 3",
+          "desc": "Move Window (Silent) To Workspace # 3",
+          "bindId": "|72|3|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 4",
+          "desc": "Move Window (Silent) To Workspace # 4",
+          "bindId": "|72|4|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 5",
+          "desc": "Move Window (Silent) To Workspace # 5",
+          "bindId": "|72|5|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 6",
+          "desc": "Move Window (Silent) To Workspace # 6",
+          "bindId": "|72|6|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 7",
+          "desc": "Move Window (Silent) To Workspace # 7",
+          "bindId": "|72|7|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 8",
+          "desc": "Move Window (Silent) To Workspace # 8",
+          "bindId": "|72|8|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + 9",
+          "desc": "Move Window (Silent) To Workspace # 9",
+          "bindId": "|72|9|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + RIGHT",
+          "desc": "Switch to workspace right",
+          "bindId": "|72|RIGHT|000|__lua",
+          "undescribed": false
+        },
+        {
+          "keys": "Super + Alt + LEFT",
+          "desc": "Switch to workspace left",
+          "bindId": "|72|LEFT|000|__lua",
+          "undescribed": false
+        }
+      ]
+    }
+  ],
+  "detectedCompositor": "hyprland",
+  "windowWidth": 1400,
+  "windowHeight": 850,
+  "autoHeight": true,
+  "columnCount": 2,
+  "modKeyVariable": "$mod",
+  "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+  "hyprlandLuaConfigPath": "~/.config/hypr/hyprland.lua",
+  "hyprlandParserMode": "lua",
+  "niriConfigPath": "~/.config/niri/config.kdl",
+  "mangoConfigPath": "~/.config/mango/config.conf",
+  "mergeSequentialBinds": false,
+  "showUndescribedBinds": false,
+  "splitLargeWorkspaceCategory": false,
+  "workspaceSplitThreshold": 12,
+  "keyColorAlt": "#FF6B6B",
+  "keyColorXF86": "#4ECDC4",
+  "keyColorPrint": "#95E1D3",
+  "keyColorNumeric": "#A8DADC",
+  "keyColorMouse": "#F38181",
+  "keyColorSuper": "",
+  "keyColorCtrl": "",
+  "keyColorShift": "",
+  "keyColorDefault": "#6C757D",
+  "keyLabelColor": "#FFFFFF",
+  "keyTextSuper": "",
+  "keyTextCtrl": "",
+  "keyTextShift": "",
+  "keyTextAlt": "",
+  "keyTextXF86": "",
+  "keyTextPrint": "",
+  "keyTextNumeric": "",
+  "keyTextMouse": "",
+  "keyTextDefault": "",
+  "descriptionTextColor": "#E0E0E0",
+  "bindOverrides": {}
+}
