@@ -546,6 +546,8 @@
         "fzf",
         "gcc",
         "git",
+        "fd",
+        "bat",
         "github-cli",
         "gpg-tui",
         "grub-btrfs",
