@@ -19,13 +19,13 @@
         "overviewLayer": false,
         "pinnedApps": [
         ],
-        "position": "center",
-        "screenshotAnnotationTool": "",
+        "position": "top_left",
+        "screenshotAnnotationTool": "gradia",
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "",
-        "viewMode": "grid"
+        "terminalCommand": "ghostty -e",
+        "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
