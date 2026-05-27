@@ -1,7 +1,7 @@
 window-theme = ghostty
 window-height = 35
 window-width = 100
-background-opacity = 0.60
+background-opacity = 0.8
 font-family = JetBrainsMono Nerd Font
 font-family-bold = JetBrainsMono Nerd Font
 font-family-italic = JetBrainsMono Nerd Font
@@ -12,3 +12,5 @@ confirm-close-surface = false
 
 keybind = ctrl+up=scroll_page_up
 keybind = ctrl+down=scroll_page_down
+
+theme = noctalia
