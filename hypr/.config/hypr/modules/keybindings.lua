@@ -121,7 +121,7 @@ local apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.ENTER)] = {name = "ghostty",               description = "Open Ghostty Terminal"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)] =    {name = "google-chrome-stable",  description = "Open Google Chrome Browser"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)] =    {name = "code",                  description = "Open VSCode"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)] =    {name = "dolphin",               description = "Open Dolphin File Manager"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)] =    {name = "nautilus",              description = "Open Nautilus File Manager"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)] =    {name = "localsend",             description = "Open Localsend"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)] =    {name = "gimp",                  description = "Open GIMP"},
 }
@@ -139,34 +139,30 @@ end
 
 -- 2. IPC Calls
 
-local ipc = "qs -c noctalia-shell "
-
 local calls = {
-    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.SPACE)] =                       {name = "ipc call launcher toggle",                                description = "Toggle Launcher"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.SPECIAL.SPACE)] =    {name = "ipc call controlCenter toggle",                           description = "Toogle Sidebar"},                 
-    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.PERIOD)] =                  {name = "ipc call settings toggle",                                description = "Toggle Settings"},             
-    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.V)] =                            {name = "ipc call launcher clipboard",                             description = "Toggle Clipboard History"},             
-    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.N)] =                            {name = "ipc call notifications toggleHistory",                    description = "Toggle Notifications"},                         
-    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.B)] =                            {name = "ipc call bar toggle",                                     description = "Toggle Bar"},     
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.T)] =     {name = "ipc call darkMode toggle",                                description = "Cycle Dark/Light Theme"},             
-    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.COMMA)] =                   {name = "ipc call launcher emoji",                                 description = "Toggle Emoji Selector"},         
-    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.C)] =                            {name = "ipc call calendar toggle",                                description = "Toggle Calendar"},             
-    [KEYS.XF86.AUDIORAISEVOLUME] =                                           {name = "ipc call volume increase",                                description = "Increase Volume"},
-    [KEYS.XF86.AUDIOLOWERVOLUME] =                                           {name = "ipc call volume decrease",                                description = "Decrease Volume"},
-    [KEYS.XF86.AUDIOMUTE] =                                                  {name = "ipc call volume muteOutput",                              description = "Toggle Mute"},
-    [chord(KEYS.MODIFIER.ALT, KEYS.SPECIAL.ESCAPE)] =                        {name = "ipc call systemMonitor toggle",                           description = "Toggle Resource Monitor"},
-    [KEYS.SPECIAL.PRINT] =                                                   {name = "ipc call plugin:screen-toolkit toggle",                   description = "Toggle Screen Toolki"},
-    [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.NAVIGATION.DELETE)] = {name = "ipc call sessionMenu toggle",                             description = "Toggle Session Menu"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.L)] =       {name = "ipc call lockScreen lock",                                description = "Lock Session"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.W)] =     {name = "ipc call wallpaper random",                               description = "Change Wallpaper"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.FUNCTION.F1)] =                         {name = "ipc call plugin:keybind-cheatsheet toggle",               description = "Toggle Keybinds"},                           
+    [chord(KEYS.MODIFIER.SUPER, KEYS.SPECIAL.SPACE)] =                       {command = "noctalia msg panel-toggle launcher",                                description = "Toggle Launcher"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.SPECIAL.SPACE)] =    {command = "noctalia msg panel-toggle control-center",                          description = "Toogle Sidebar"},                 
+    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.PERIOD)] =                  {command = "noctalia msg settings-toggle",                                      description = "Toggle Settings"},             
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.V)] =                            {command = "noctalia msg panel-toggle clipboard",                               description = "Toggle Clipboard History"},             
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.N)] =                            {command = "noctalia msg panel-toggle control-center notifications",            description = "Toggle Notifications"},                         
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.B)] =                            {command = "noctalia msg bar-toggle",                                           description = "Toggle Bar"},     
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.T)] =     {command = "noctalia msg theme-mode-toggle",                                    description = "Cycle Dark/Light Theme"},             
+    [chord(KEYS.MODIFIER.SUPER, KEYS.PUNCTUATION.COMMA)] =                   {command = "noctalia msg panel-toggle launcher /emo",                           description = "Toggle Emoji Selector"},         
+    [chord(KEYS.MODIFIER.ALT, KEYS.ALPHABET.C)] =                            {command = "noctalia msg panel-toggle control-center calendar",                 description = "Toggle Calendar"},             
+    [KEYS.XF86.AUDIORAISEVOLUME] =                                           {command = "noctalia msg volume-up",                                            description = "Increase Volume"},
+    [KEYS.XF86.AUDIOLOWERVOLUME] =                                           {command = "noctalia msg volume-up",                                            description = "Decrease Volume"},
+    [KEYS.XF86.AUDIOMUTE] =                                                  {command = "noctalia msg volume-mute",                                          description = "Toggle Mute"},
+    [chord(KEYS.MODIFIER.ALT, KEYS.SPECIAL.ESCAPE)] =                        {command = "noctalia msg panel-toggle control-center system",                   description = "Toggle Resource Monitor"},
+    [chord(KEYS.MODIFIER.CTRL, KEYS.MODIFIER.ALT, KEYS.NAVIGATION.DELETE)] = {command = "noctalia msg panel-toggle session",                                 description = "Toggle Session Menu"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.L)] =       {command = "noctalia msg screen-lock",                                          description = "Lock Session"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.W)] =     {command = "noctalia msg wallpaper-random",                                     description = "Change Wallpaper"}, 
 }
 
 
 for keybind,call in pairs(calls) do 
     hl.bind(
         keybind,
-        hl.dsp.exec_cmd(ipc .. call.name),
+        hl.dsp.exec_cmd(call.command),
         {
             description = call.description
         }
