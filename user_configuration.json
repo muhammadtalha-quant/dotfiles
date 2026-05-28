@@ -533,6 +533,7 @@
         "fisher",
         "more",
         "7zip",
+        "unzip",
         "base-devel",
         "btrfs-assistant",
         "clang",
@@ -553,15 +554,15 @@
         "grub-btrfs",
         "lazygit",
         "libreoffice-fresh",
-	    "stow",
+	"stow",
         "pacman-contrib",
         "snap-pac",
         "snapper",
         "tinymist",
         "ttf-jetbrains-mono",
         "ttf-jetbrains-mono-nerd",
-        "typst",
-        "unzip"
+	"gum",
+        "typst"
     ],
     "pacman_config": {
         "color": true,
