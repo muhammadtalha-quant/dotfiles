@@ -1,9 +1,9 @@
 fish/.config/fish/fish_variables*
 fish/.config/fish/functions
 fish/.config/fish/completions
-/noctalia/.local/state/noctalia/
+noctalia/.local/state/noctalia/
+!noctalia/.local/state/noctalia/settings.toml
 hypr/.config/hypr/noctalia.lua
-!/noctalia/.local/state/noctalia/settings.toml
 kitty/.config/kitty/kitty.conf.bak
 kitty/.config/kitty/current-theme.conf
 kitty/.config/kitty/themes
