@@ -1,21 +1,21 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "kitty-direct",
-    "source": "/home/$USER/.config/fastfetch/logo/archr.png",
+    "type": "auto",
+    "source": "/home/$USER/.config/fastfetch/logo/noctalia.txt",
   },
   "display": {
     "separator": " : "
   },
   "modules": [
     {
-      "type": "custom",
-      "format": "┌──────────────────────────────────────────┐"
+      "type": "title",
+      "key": "  ",
+      "format": "{6} {7} {8}"
     },
     {
-      "type": "chassis",
-      "key": "  󰇺 Chassis",
-      "format": "{1} {2} {3}"
+      "type": "custom",
+      "format": "┌───────────────────────────────────────────┐"
     },
     {
       "type": "os",
@@ -43,6 +43,13 @@
     {
       "type": "terminal",
       "key": "   Terminal",
+      "format": "{2} {6}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "shell",
+      "key": "   Shell",
+      "format": "{6} {4}",
       "keyColor": "yellow"
     },
     {
@@ -53,14 +60,15 @@
     },
     {
       "type": "custom",
-      "format": "└──────────────────────────────────────────┘"
+      "key": "   Desktop Shell",
+      "format": "Noctalia {$NOCTALIA_VERSION}",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "└───────────────────────────────────────────┘"
     },
     "break",
-    {
-      "type": "title",
-      "key": "  ",
-      "format": "{6} {7} {8}"
-    },
     {
       "type": "custom",
       "format": "┌────────────────────────────────────────────────┐"
@@ -78,14 +86,9 @@
       "keyColor": "blue"
     },
     {
-      "type": "gpu",
-      "format": "{3}",
-      "key": "   GPU Driver",
-      "keyColor": "magenta"
-    },
-    {
       "type": "memory",
-      "key": "   Memory ",
+      "key": "   Memory ",
+      "format": "{1} used out of {2}",
       "keyColor": "magenta"
     },
     {
