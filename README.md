@@ -9,7 +9,7 @@ Following steps should be followed to install these configs. Unlike other config
 - To find your wlan id, type `iwctl station list`
 - To find your network (just in case), type `iwctl station wlan<id> get-networks`
 - After you connect to wifi, test your connection with `ping -c 5 google.com`
-- Then after that run `sudo pacman -Sy archinstall archlinux-keyring git nano jq` to refresh package database for pacman and install some pre-requisites for the dotfile installation. 
+- Then after that run `sudo pacman -Sy archinstall archlinux-keyring git jq` to refresh package database for pacman and install some pre-requisites for the dotfile installation. 
 
 ### Step 2
 - Clone the repository into the live session by `git clone https://github.com/muhammadtalha-quant/dotfiles.git`.
