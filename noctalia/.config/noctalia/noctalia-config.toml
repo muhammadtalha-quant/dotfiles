@@ -86,8 +86,8 @@
       variant = "destructive"
 
 [theme]
-  source = "wallpaper"
-  wallpaper_scheme = "vibrant"
+  builtin = "Gruvbox"
+  source = "builtin"
   [theme.templates]
     builtin_ids = ["cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt"]
     enable_community_templates = false
