@@ -133,7 +133,7 @@ local apps = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.B)] =    {cmd = "google-chrome-stable",  desc = "Open Google Chrome Browser"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.C)] =    {cmd = "code",                  desc = "Open VSCode"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.E)] =    {cmd = "kitty -e yazi",         desc = "Open Yazi File Manager"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)] =    {cmd = "kdeconnect",            desc = "Open KDEConnect"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.L)] =    {cmd = "kdeconnect-app",            desc = "Open KDEConnect"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.G)] =    {cmd = "gimp",                  desc = "Open GIMP"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.ALPHABET.M)] =    {cmd = "kitty -e cava",         desc = "Open cava music simulator"}
 }
@@ -174,9 +174,9 @@ local utils = {
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "hyprcap shot region -z -c -n",                 desc = "Capture Region"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.S)] =       {cmd = "hyprcap shot window:active -z -c -n",          desc = "Capture Focused Window"},
     [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.S)] =      {cmd = "hyprcap shot monitor:active -z -c -n",         desc = "Capture Full Screen"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.S)] =     {cmd = "hyprcap rec region -c -n",                     desc = "Record Region"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.S)] =       {cmd = "hyprcap rec window:active -c -n",              desc = "Record Focused Window"},
-    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.S)] =      {cmd = "hyprcap rec monitor:active -c -n",             desc = "Record Full Screen"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.SHIFT, KEYS.ALPHABET.R)] =     {cmd = "hyprcap rec region -c -n",                     desc = "Record Region"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.ALT, KEYS.ALPHABET.R)] =       {cmd = "hyprcap rec window:active -c -n",              desc = "Record Focused Window"},
+    [chord(KEYS.MODIFIER.SUPER, KEYS.MODIFIER.CTRL, KEYS.ALPHABET.R)] =      {cmd = "hyprcap rec monitor:active -c -n",             desc = "Record Full Screen"},
     [KEYS.LOCKS.SCROLLLOCK] =                                                {cmd = "hyprpicker -a -f hex",                         desc = "Pick Color"},
 }
 
