@@ -18,7 +18,7 @@ Following steps should be followed to install these configs. Unlike other config
 - Run `jq '.hostname |= "host-name-of-your-choice" | .disk_config.device_modifications.[0].device |= "/dev/<target-device>"' config_template.json > config.json` to change your hostname and the target disk for installation.
 - Run `jq '.encryption_password |= "disk-encryption-password-of-your-choice" | ."!root-password" |= "root-password-of-your-choice" | .users.[0]."!password" |= "user-password-of-your-choice" | .users.[0].username |= "username-of-your-choice"' creds_template.json > creds.json` to change username, disk encryption password, password for the root user and password for the normal user.
 
-> ![CAUTION]
+> [!CAUTION]
 > Keep the passwords memorable, keep them somewhere safe, write them in your mobile notepad app. If you lost these passwords and got locked out of your PC or your important data is lost then don't blame me.
 
 ### Step 3
