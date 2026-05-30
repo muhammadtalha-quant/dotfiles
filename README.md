@@ -14,12 +14,12 @@ Following steps should be followed to install these configs. Unlike other config
 ### Step 2
 - Clone the repository into the live session by `git clone https://github.com/muhammadtalha-quant/dotfiles.git`.
 - Change directory to the freshly cloned repo with `cd dotfiles`
-- Run `jq '.hostname |= "host-name-of-your-choice"' config.json > config.json` to change your hostname.
-- Run `lsblk` and find your storage device node, then run `jq '.disk_config.device_modifications.[0].device |= "/dev/<target-device>"' config.json` to point to the correct storage device for installation
-- Run `jq '.encryption_password |= "disk-encryption-password-of-your-choice"' creds.json > creds.json` to change disk encryption password.
-- Run `jq '."!root-password" |= "root-password-of-your-choice"' creds.json > creds.json` to change root user password.
-- Run `jq '.users.[0]."!password" |= "user-password-of-your-choice"' creds.json > creds.json` to change your user password. This password will be used in logging into system.
-- Run `jq '.users.[0].username |= "username-of-your-choice"' creds.json > creds.json` to change your username.
+- Run `lsblk` and find your storage device node to which you want to install archlinux. 
+- Run `jq '.hostname |= "host-name-of-your-choice" | .disk_config.device_modifications.[0].device |= "/dev/<target-device>"' config_template.json > config.json` to change your hostname and the target disk for installation.
+- Run `jq '.encryption_password |= "disk-encryption-password-of-your-choice" | ."!root-password" |= "root-password-of-your-choice" | .users.[0]."!password" |= "user-password-of-your-choice" | .users.[0].username |= "username-of-your-choice"' creds_template.json > creds.json` to change username, disk encryption password, password for the root user and password for the normal user.
+
+> ![CAUTION]
+> Keep the passwords memorable, keep them somewhere safe, write them in your mobile notepad app. If you lost these passwords and got locked out of your PC or your important data is lost then don't blame me.
 
 ### Step 3
 - Run `archinstall --config config.json --creds creds.json` to begin the unattended installation of arch linux.
