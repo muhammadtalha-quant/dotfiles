@@ -58,31 +58,32 @@
     clipboard_placement = "attached"
     launcher_categories = false
     launcher_placement = "attached"
+    session_placement = "centered"
     transparency_mode = "glass"
   [shell.session]
 
     [[shell.session.actions]]
       action = "logout"
       enabled = true
-      shortcut = "2"
+      shortcut = "1"
       variant = "default"
 
     [[shell.session.actions]]
       action = "suspend"
       enabled = true
-      shortcut = "3"
+      shortcut = "2"
       variant = "default"
 
     [[shell.session.actions]]
       action = "reboot"
       enabled = true
-      shortcut = "4"
+      shortcut = "3"
       variant = "default"
 
     [[shell.session.actions]]
       action = "shutdown"
       enabled = true
-      shortcut = "5"
+      shortcut = "4"
       variant = "destructive"
 
 [theme]
