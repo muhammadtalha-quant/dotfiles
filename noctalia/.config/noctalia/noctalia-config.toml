@@ -86,7 +86,6 @@
       variant = "destructive"
 
 [theme]
-  builtin = "Gruvbox"
   source = "wallpaper"
   wallpaper_scheme = "vibrant"
   [theme.templates]
