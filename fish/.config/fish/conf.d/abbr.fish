@@ -45,6 +45,7 @@ abbr --add mkdir 'mkdir -p'
 abbr --add ping 'ping -c 10'
 abbr --add less 'less -R'
 abbr --add cls clear
+abbr --add vim nvim
 abbr --add vi nvim
 abbr --add lg lazygit
 abbr --add linutil 'curl -fsSL https://christitus.com/linux | sh'
