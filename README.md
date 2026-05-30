@@ -25,7 +25,8 @@ Following steps should be followed to install these configs. Unlike other config
 - Run `archinstall --config config.json --creds creds.json` to begin the unattended installation of arch linux.
 - When the installation is completed, select reboot to restart your system..
 
-> [!NOTE] This will install minimal arch linux with hyprland on top.
+> [!NOTE]
+> This will install minimal arch linux with hyprland on top.
 
 ### Step 4
 - Open terminal using the key shown in hyprland generated message bar in the top.
