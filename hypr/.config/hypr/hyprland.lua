@@ -1,6 +1,7 @@
 require("modules.keybindings")
 require("modules.monitors")
 require("modules.looknfeel")
+require("modules.envvars")
 
 local function start_shell()
 	hl.exec_cmd("noctalia")
